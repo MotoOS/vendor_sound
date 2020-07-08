@@ -3,8 +3,6 @@ include $(CLEAR_VARS)
 
 LOCAL_PATH := vendor/sound
 
-ifneq ($(DEX_OS),original)
-
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media,$(TARGET_COPY_OUT_PRODUCT)/media)
 
 # UI
@@ -48,10 +46,10 @@ $(LOCAL_PATH)/product/media/ui/VideoRecord.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/
 $(LOCAL_PATH)/product/media/alarms/Chimes.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Chimes.ogg \
 $(LOCAL_PATH)/product/media/notifications/FadeIn.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/FadeIn.ogg \
 
-ro.config.ringtone=mi.ogg
-ro.config.notification_sound=mi.ogg
-ro.config.alarm_alert=Chimes.ogg
-ro.config.sms_received_sound=FadeIn.ogg
-ro.config.sms_delivered_sound=MessageComplete.ogg
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.config.ringtone=mi.ogg \
+ro.config.notification_sound=mi.ogg \
+ro.config.alarm_alert=Chimes.ogg \
+ro.config.sms_received_sound=FadeIn.ogg \
+ro.config.sms_delivered_sound=MessageComplete.ogg \
 
-endif
