@@ -5,8 +5,10 @@ LOCAL_PATH := vendor/sound
 
 ifneq ($(DEX_OS),original)
 
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media,$(TARGET_COPY_OUT_PRODUCT)/media)
+
 # UI
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
  $(LOCAL_PATH)/product/media/ui/camera_click.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/camera_click.ogg \
  $(LOCAL_PATH)/product/media/ui/camera_focus.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/camera_focus.ogg \
  $(LOCAL_PATH)/product/media/ui/charge_wireless.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/charge_wireless.ogg \
@@ -42,7 +44,7 @@ $(LOCAL_PATH)/product/media/ui/SystemDelete.ogg:$(TARGET_COPY_OUT_PRODUCT)/media
 $(LOCAL_PATH)/product/media/ui/VideoRecord.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/VideoRecord.ogg \
  $(LOCAL_PATH)/product/media/ui/VideoStop.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/VideoStop.ogg \
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/product/media/alarms/Chimes.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Chimes.ogg \
 $(LOCAL_PATH)/product/media/notifications/FadeIn.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/FadeIn.ogg \
 
