@@ -3,7 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_PATH := vendor/sound
 
- UI
+# UI
 PRODUCT_COPY_FILES += \
  $(LOCAL_PATH)/product/media/ui/camera_click.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/camera_click.ogg \
  $(LOCAL_PATH)/product/media/ui/camera_focus.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/camera_focus.ogg \
