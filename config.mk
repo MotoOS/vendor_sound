@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/product/media/alarms/Chimes.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Chimes.ogg \
 $(LOCAL_PATH)/product/media/notifications/FadeIn.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/FadeIn.ogg \
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
 ro.config.ringtone=mi.ogg \
 ro.config.notification_sound=mi.ogg \
 ro.config.alarm_alert=Chimes.ogg \
